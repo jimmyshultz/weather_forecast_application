@@ -9,7 +9,6 @@ h1 {
 
 form {
     text-align: center;
-    margin-top: 50px;
 }
 
 input {
@@ -32,4 +31,12 @@ button {
     font-size: 18px;
     padding-left: 20vh;
     padding-right: 20vh;
+}
+
+#or {
+    text-align: center;
+}
+
+.forms {
+    padding: 30px;
 }

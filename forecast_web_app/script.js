@@ -1,7 +1,7 @@
-//document.getElementById('weather-form').addEventListener('submit', handleClick);
+document.getElementById('current-location-form').addEventListener('submit', handleClick);
 document.getElementById('weather-form').addEventListener('submit', handleSearch);
 
-function handleClick(event) {
+/*function handleClick(event) {
     event.preventDefault();
     var city = document.getElementById('city').value;
     if (city == "New York") {
@@ -31,6 +31,17 @@ function handleClick(event) {
             displayGeolocationError();
         }
     }
+}*/
+
+function handleClick(event) {
+    event.preventDefault();
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+            getOfficeId(position.coords.latitude, position.coords.longitude);
+            }, displayGeolocationBlocked());
+    } else {
+        displayGeolocationError();
+    }
 }
 
 function handleSearch(event) {
@@ -41,7 +52,7 @@ function handleSearch(event) {
 }
 
 function getLatLon(cityName, stateName) {
-    var bingMapsKey = "Ao7gQtkN9LjNj3kHUwHzcACGxSBoqnQ0PFun68SN9kmWirlB41Lzsm7if9S799WL"
+    var bingMapsKey = config.bingMapsKey;
     var url = `http://dev.virtualearth.net/REST/v1/Locations/US/${stateName}/${cityName}/?output=json&key=${bingMapsKey}`
     fetch(url)
         .then(function(response) {
