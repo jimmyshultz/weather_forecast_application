@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Weather Forecast</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="grad">
     <h1>Weather Forecast</h1>
     <div class="forms">
         <form id="current-location-form">
-            <label>Use Current Location:</label>
-            <button type="submit">Get Weather</button>
+            <button type="submit">Current Location</button>
         </form>
         <p id="or">--or--</p>
         <form id="weather-form">
@@ -27,14 +28,12 @@
                 <option value="San Francisco">San Francisco</option>
                 <option value="Los Angeles">Los Angeles</option>
             </select>-->
-            <label for="city">City:</label>
-            <input type="text" id="city" name="city" value="Nashville">
-            <label for="state">State:</label>
+            <input type="text" id="city" name="city" placeholder="Enter City">
             <select id="state" name="state">
-                <option value="">--Select--</option>
+                <option value="">--Select State--</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
-                <option value="AZ">Arizon</option>
+                <option value="AZ">Arizona</option>
                 <option value="AR">Arkansas</option>
                 <option value="CA">California</option>
                 <option value="CO">Colorado</option>
@@ -88,8 +87,8 @@
             <button type="submit">Get Weather</button>
         </form>
     </div>
-    <script src="script.js"></script>
-    <script src="config.js"></script>
-    <div id="weather-info"></div>
+    <script src="js/script.js"></script>
+    <script src="js/config.js"></script>
+    <div id="weather-info" class="weather-info"></div>
 </body>
 </html>

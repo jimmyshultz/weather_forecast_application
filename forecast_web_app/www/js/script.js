@@ -53,7 +53,7 @@ function handleSearch(event) {
 
 function getLatLon(cityName, stateName) {
     var bingMapsKey = config.bingMapsKey;
-    var url = `http://dev.virtualearth.net/REST/v1/Locations/US/${stateName}/${cityName}/?output=json&key=${bingMapsKey}`
+    var url = `https://dev.virtualearth.net/REST/v1/Locations/US/${stateName}/${cityName}/?output=json&key=${bingMapsKey}`
     fetch(url)
         .then(function(response) {
             return response.json();
