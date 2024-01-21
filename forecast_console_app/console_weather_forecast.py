@@ -139,6 +139,7 @@ def main():
                 x+=1
             else:
                 print("Couldn't receive data.  Try entering another location.")
+                x+=1
         else:
             break
     

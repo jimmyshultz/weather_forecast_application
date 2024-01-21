@@ -1,37 +1,6 @@
 document.getElementById('current-location-form').addEventListener('submit', handleClick);
 document.getElementById('weather-form').addEventListener('submit', handleSearch);
 
-/*function handleClick(event) {
-    event.preventDefault();
-    var city = document.getElementById('city').value;
-    if (city == "New York") {
-        getWeather("OKX", 33, 35, city);
-    } else if (city == "Boston") {
-        getWeather("BOX", 71, 90, city);
-    } else if (city == "Orlando") {
-        getWeather("MLB", 26, 68, city);
-    } else if (city == "Chicago") {
-        getWeather("LOT", 76, 73, city);
-    } else if (city == "Washington") {
-        getWeather("LWX", 96, 72, city);
-    } else if (city == "Atlanta") {
-        getWeather("FFC", 51, 87, city);
-    } else if (city == "Seattle") {
-        getWeather("SEW", 125, 68, city);
-    } else if (city == "San Francisco") {
-        getWeather("MTR", 85, 105, city);
-    } else if (city == "Los Angeles") {
-        getWeather("LOX", 155, 45, city);
-    } else if (city == "Current Location") {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition((position) => {
-                getOfficeId(position.coords.latitude, position.coords.longitude);
-                }, displayGeolocationBlocked());
-        } else {
-            displayGeolocationError();
-        }
-    }
-}*/
 
 function handleClick(event) {
     event.preventDefault();
@@ -107,7 +76,7 @@ function displayWeather(data, city, state) {
             var direction = data.properties.periods[0].windDirection;
             var forecast = data.properties.periods[0].detailedForecast;
             var weatherHtml = '<h2>Weather Forecast for ' + period + ' in ' + city + ', ' + state + '</h2>' +
-                '<p>Temperature: ' + temperature + ' &#8451;</p>' +
+                '<p>Temperature: ' + temperature + '&#8457;</p>' +
                 '<p>Humidity: ' + humidity + '%</p>' +
                 '<p>Wind Speed: ' + windSpeed + ' m/s ' + direction + '</p>' +
                 '<h3> Forecast </h3>' +
@@ -126,7 +95,7 @@ function displayWeather(data, city, state) {
             var direction = data.properties.periods[0].windDirection;
             var forecast = data.properties.periods[0].detailedForecast;
             var weatherHtml = '<h2>Weather Forecast for ' + period + ' in ' + city + '</h2>' +
-                '<p>Temperature: ' + temperature + ' &#8451;</p>' +
+                '<p>Temperature: ' + temperature + '&#8457;</p>' +
                 '<p>Humidity: ' + humidity + '%</p>' +
                 '<p>Wind Speed: ' + windSpeed + ' m/s ' + direction + '</p>' +
                 '<h3> Forecast </h3>' +
