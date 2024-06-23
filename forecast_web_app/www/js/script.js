@@ -71,13 +71,13 @@ function displayWeather(data, city, state) {
             var period = data.properties.periods[0].name;
             var temperature = data.properties.periods[0].temperature;
             var trend = data.properties.periods[0].temperatureTrend;
-            var humidity = data.properties.periods[0].relativeHumidity.value;
+            //var humidity = data.properties.periods[0].relativeHumidity.value;
             var windSpeed = data.properties.periods[0].windSpeed;
             var direction = data.properties.periods[0].windDirection;
             var forecast = data.properties.periods[0].detailedForecast;
             var weatherHtml = '<h2>Weather Forecast for ' + period + ' in ' + city + ', ' + state + '</h2>' +
                 '<p>Temperature: ' + temperature + '&#8457;</p>' +
-                '<p>Humidity: ' + humidity + '%</p>' +
+                //'<p>Humidity: ' + humidity + '%</p>' +
                 '<p>Wind Speed: ' + windSpeed + ' m/s ' + direction + '</p>' +
                 '<h3> Forecast </h3>' +
                 '<p>' + forecast + '</p>';
@@ -90,13 +90,13 @@ function displayWeather(data, city, state) {
             var period = data.properties.periods[0].name;
             var temperature = data.properties.periods[0].temperature;
             var trend = data.properties.periods[0].temperatureTrend;
-            var humidity = data.properties.periods[0].relativeHumidity.value;
+            //var humidity = data.properties.periods[0].relativeHumidity.value;
             var windSpeed = data.properties.periods[0].windSpeed;
             var direction = data.properties.periods[0].windDirection;
             var forecast = data.properties.periods[0].detailedForecast;
             var weatherHtml = '<h2>Weather Forecast for ' + period + ' in ' + city + '</h2>' +
                 '<p>Temperature: ' + temperature + '&#8457;</p>' +
-                '<p>Humidity: ' + humidity + '%</p>' +
+                //'<p>Humidity: ' + humidity + '%</p>' +
                 '<p>Wind Speed: ' + windSpeed + ' m/s ' + direction + '</p>' +
                 '<h3> Forecast </h3>' +
                 '<p>' + forecast + '</p>';
